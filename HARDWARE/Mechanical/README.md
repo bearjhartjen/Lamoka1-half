@@ -1,0 +1,46 @@
+# HARDWARE/Mechanical
+
+Mechanical models for the Lamoka1 project. Everything in this folder is an
+export — the KiCad layouts are the sources, and every file here can be
+regenerated from them. We keep them here so enclosure and fit checks are a
+download away, and so nobody has to guess at the board outline.
+
+| File | What it is |
+| --- | --- |
+| `Lamoka1-half.stl` | Lamoka1/2 main board, assembled with all parts, baked into one object |
+| `Lamoka1-DEV-Brain.stl` | DEV-Brain control board, assembled with all parts, baked into one object |
+
+Both files open directly in a slicer (Bambu Studio, Orca, Cura) with every
+part sitting where it belongs. They are single objects, so nothing splits
+apart or lays itself flat the way an assembly STEP does. They carry no
+colours and the parts cannot be separated — they are viewing and fit-check
+models, not manufacturing data.
+
+## Board models
+
+The board models are made from the KiCad layouts, so regenerate them after
+any layout change:
+
+```bash
+make step        # both files, via kicad-cli
+```
+
+Component bodies come from KiCad's stock 3D libraries and from the vendor
+models that the layouts reference under `${KIPRJMOD}/components/3dmodels/`.
+The vendor files are not redistributed
+(see [License](../../README.md#license)), so a fresh clone exports the bare
+board until you supply your own copies — the export itself always works, only
+the component bodies depend on them.
+
+All of it is covered by the project's hardware license, CERN-OHL-W-2.0, like
+the rest of `HARDWARE/`.
+
+## The transformer is not modelled here
+
+The off-board transformer is not part of either model. The fitted part is
+the Triad `VPT24-6670` — 160 VA, Ø106 × 52 mm,
+1.6 kg, on an M6 × 60 mm bolt — which is larger and heavier than the 100 VA
+`VPT24-4170` it replaces (Ø88 × 51 mm, 1.0 kg, M6 × 55 mm). The enclosure has
+to be re-dimensioned for it, and the extra 0.6 kg on 200 mm leads wants a
+strain-relief clamp. The lead map is in
+[`../Transformer-wiring.md`](../Transformer-wiring.md).
