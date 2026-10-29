@@ -1,0 +1,18 @@
+# GitHub Linguist: keep the language chart on design source,
+# not generated manufacturing output.
+
+# Interactive BOMs are generated HTML — without this GitHub labels the repo "HTML"
+*.html linguist-generated=true
+
+# Manufacturing output (Gerbers, drill, job files, ERC/DRC reports)
+*.gbr linguist-generated=true
+*.gbrjob linguist-generated=true
+*.drl linguist-generated=true
+*.rpt linguist-generated=true
+*.job linguist-generated=true
+
+# Fab / vendor order exports (generated snapshots, keeps diffs clean)
+*.csv linguist-generated=true
+*.tsv linguist-generated=true
+*.xls linguist-generated=true
+*.xlsx linguist-generated=true
