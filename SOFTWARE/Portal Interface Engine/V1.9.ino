@@ -1301,21 +1301,22 @@ static_assert(F_CPU == 150000000UL,
 #define DIV_AIN1           (10.0f / (68.0f + 10.0f))   // 21.75 V bus, 25.74 V FS
 #define DIV_AIN2           (10.0f / (68.0f + 10.0f))   // bridge midpoint A
 #define DIV_AIN3           (10.0f / (68.0f + 10.0f))   // bridge midpoint B
-// AIN4 is the input current at 0.04 V/A: the INA240A1 gain (20x) times the
-// RCS1 shunt (2 mOhm 2512, as fitted on the board).  The
+// AIN4 is the input (battery) current at 0.100 V/A: the INA240A2 gain
+// (50 V/V) times the RCS1 shunt (2 mΩ 2512, as fitted on the board and
+// confirmed by the October 29 2026 turnkey BOM: INA240A2DR).  The
 // INA240's reference pins are grounded, so its output cannot go below
 // ground: a REVERSE current through RCS1 reads as 0 A and is invisible
 // to the over-current trip.  The input-rail check still refuses to arm
 // with a reversed battery, but the current direction itself is not
 // observable.
 // The battery current follows the 120 Hz output envelope, so it crests at
-// about twice its average: 100 W at 11 V is 10.2 A average and about
-// 20.4 A at the crest.  The 3.3 V ADC rail must therefore cover more than
-// 20 A, which is why the INA240A1 (20 V/V, 0.04 V/A, 82.5 A full scale) is
-// fitted.  The INA240A2 (50 V/V, 33 A full scale) would also do but is out
-// of stock; the INA240A3 (100 V/V, 0.2 V/A) clips at 16.5 A, below the
-// rated-load crest, and is not used.
-#define INA240_V_PER_A     0.04f                        // AIN4, 0.04 V/A (INA240A1DR, 20 V/V on RCS1's 2 mΩ)
+// about twice its average: 100 W at 11 V is ~10.2 A average and about
+// 20.4 A at the crest.  The 3.3 V ADC rail with the A2 (50 V/V) covers
+// 33 A full scale, which is above the 26 A software trip and the crest
+// at rated load.  (The A1 20 V/V / 0.04 V/A assumption present in earlier
+// V1.9 drafts is incorrect for the fitted part and would report 2.5×
+// the true current.)
+#define INA240_V_PER_A     0.100f                       // AIN4, 0.100 V/A (INA240A2DR, 50 V/V on RCS1's 2 mΩ)
 
 // AIN2/AIN3 filter (recorded, not corrected).
 //

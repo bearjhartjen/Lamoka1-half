@@ -11,6 +11,13 @@ gate-driver PWM signals, reads the ADS7128 monitor chain, and runs the inverter'
 control and protection loops. V1.9 is **not** DEV-Brain firmware and does not run
 unmodified on the Lamoka1-DEV-Brain.
 
+**Hardware match (October 29 2026 turnkey):** This release is aligned to the
+PCBWay turnkey fabrication files and BOM dated 2026-10-29. The principal
+correction versus earlier V1.9 drafts is the input-current scaling: the board
+fits an INA240A2DR (50 V/V) across a 2 mΩ shunt, so the conversion is
+0.100 V/A. Earlier drafts that assumed the A1 grade (0.04 V/A) are incorrect
+for the manufactured hardware and would report 2.5× the true battery current.
+
 The firmware is written in Arduino C++ using the **FastLED** library for LED output,
 the Raspberry Pi Pico SDK (`hardware/pwm`, `hardware/adc`, `hardware/watchdog`) for the
 power stage, `Wire` for the ADS7128, and `pico/bootrom.h` for `reset_usb_boot()`.
@@ -609,21 +616,22 @@ recovery does not need an MCU reset.
 The ADS7128 (7-bit address `0x10`, ADDR open) is scanned on a 15-step weighted
 schedule: 12 of the 15 conversions are the two bridge midpoints (AIN2/AIN3),
 and the slow channels (AIN0 input rail, AIN1 21.75 V bus, AIN4 INA240) are
-each read once per sequence. The fitted INA240A1DR is the 20 V/V grade, so
-`INA240_V_PER_A` is 0.04 V/A and the 3.3 V ADC rail is 82.5 A full scale. The
-50 V/V A2 is out of stock until 2027; the 100 V/V A3 clips at 16.5 A, below
-the ~20 A battery-current crest at rated load, so neither current threshold
-could be reached with it. In the host I2C model (400 kHz,
-the firmware's own transaction sequence) a conversion costs about 0.84 ms, so a
-sequence takes about 12.6 ms, each slow channel is sampled about every 12.6 ms,
-and each midpoint about every 2.1 ms (about every millisecond combined, since
-the two midpoints alternate). These are model numbers, not silicon
-measurements; the bench must measure them. A plain five-channel round-robin
-gave the midpoints only 270 Hz and made the DC estimate need a full cycle of
-held values; the weighted sweep gives each midpoint a fresh sample every ~2 ms.
-The I2C
-timeout is capped at 2 ms so a stuck bus cannot block the loop for the default
-1000 ms.
+each read once per sequence. The fitted part is the INA240A2DR (50 V/V gain)
+across the 2 mΩ RCS1 shunt, giving `INA240_V_PER_A` = 0.100 V/A. The 3.3 V
+ADC rail therefore spans 33 A full scale, which is above the 26 A software
+trip and the ~20.4 A crest expected at 100 W on an 11 V battery. (Earlier
+V1.9 drafts assumed the A1 20 V/V / 0.04 V/A grade; that scaling is incorrect
+for the October 29 2026 turnkey BOM and would have reported 2.5× the true
+current.) REF1/REF2 are grounded, so reverse current reads as 0 A. In the host
+I2C model (400 kHz, the firmware's own transaction sequence) a conversion
+costs about 0.84 ms, so a sequence takes about 12.6 ms, each slow channel is
+sampled about every 12.6 ms, and each midpoint about every 2.1 ms (about every
+millisecond combined, since the two midpoints alternate). These are model
+numbers, not silicon measurements; the bench must measure them. A plain
+five-channel round-robin gave the midpoints only 270 Hz and made the DC
+estimate need a full cycle of held values; the weighted sweep gives each
+midpoint a fresh sample every ~2 ms. The I2C timeout is capped at 2 ms so a
+stuck bus cannot block the loop for the default 1000 ms.
 
 Each midpoint channel keeps its own 32-entry ring of `(time, volts, sin, cos)`
 samples, with the 60 Hz carrier phase captured when the conversion *started*
