@@ -1,7 +1,19 @@
-ERC report (2026-10-20T20:08:01, Encoding UTF8)
+ERC report (2026-10-29T19:00:42, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
+[lib_symbol_issues]: The symbol library 'Flamingo&Cactus-logo' was not found at '/home/bearjoshuahartjen/Documents/Lamoka1-project/Images/Flamingo&Cactus-logo.kicad_sym'
+    ; warning
+    @(11000 mils, 6900 mils): Symbol #G1 [LOGO]
+[lib_symbol_issues]: The symbol library 'Flamingo&Cactus-logo' was not found at '/home/bearjoshuahartjen/Documents/Lamoka1-project/Images/Flamingo&Cactus-logo.kicad_sym'
+    ; warning
+    @(12300 mils, 7650 mils): Symbol #G4 [LOGO]
+[lib_symbol_issues]: The symbol library 'Flamingo&Cactus-logo' was not found at '/home/bearjoshuahartjen/Documents/Lamoka1-project/Images/Flamingo&Cactus-logo.kicad_sym'
+    ; warning
+    @(15850 mils, 10350 mils): Symbol #G2 [LOGO]
+[lib_symbol_issues]: The symbol library 'Flamingo&Cactus-logo' was not found at '/home/bearjoshuahartjen/Documents/Lamoka1-project/Images/Flamingo&Cactus-logo.kicad_sym'
+    ; warning
+    @(15850 mils, 10350 mils): Symbol #G3 [LOGO]
 
 ***** Sheet /Control-Section/
 
@@ -9,7 +21,7 @@ Report includes: Errors, Warnings
 
 ***** Sheet /User-Interface-Section/
 
- ** ERC messages: 0  Errors 0  Warnings 0
+ ** ERC messages: 4  Errors 0  Warnings 4
 
  ** Ignored checks:
     - Global label only appears once in the schematic

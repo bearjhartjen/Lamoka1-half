@@ -1,0 +1,75 @@
+Line #,Quantity Per Board,Reference Designator,Part Number,Part Description,Package,Type,Manufacturer,Manufacturer Part Number
+1,1,C11,GRM31CR61A107MEA8K,"Capacitor, 100 uF, 1206",1206,SMT,Murata,GRM31CR61A107MEA8K
+2,1,C12,CL05A106MQ5NUNC,"Capacitor, 10 uF, 0402, AMS1117 5 V input",0402,SMT,Samsung Electro-Mechanics,CL05A106MQ5NUNC
+3,1,C13,T491A226K010AT,"Tantalum capacitor, 22 uF, 10 V, 3216 (A case), 3.3 V rail output",3216 (A case),SMT,KEMET,T491A226K010AT
+4,3,"C16,C14,C15",CL10A475KP8NNNC,"Capacitor, 4.7 uF, 0603",0603,SMT,Samsung Electro-Mechanics,CL10A475KP8NNNC
+5,3,"C17,C18,C19",CL05B104KO5NNNC,"Capacitor, 100 nF, 0402",0402,SMT,Samsung Electro-Mechanics,CL05B104KO5NNNC
+6,2,"C20,C21",0402CG150J500NT,"Capacitor, 15 pF, C0G, 0402",0402,SMT,Fenghua (Guangdong Fenghua Advanced Tech),0402CG150J500NT
+7,2,"C23,C22",GRM21BR71H105KA12L,"Capacitor, 1 uF, 0805",0805,SMT,Murata,GRM21BR71H105KA12L
+8,1,C24,TMK212BBJ106KG-T,"Capacitor, 10 uF, 0805",0805,SMT,Taiyo Yuden,TMK212BBJ106KG-T
+9,1,C25,GRM31CR71A226KE15L,"Capacitor, 22 uF, 1206",1206,SMT,Murata,GRM31CR71A226KE15L
+10,1,C26,CL10A105KA8NNNC,"Capacitor, 1 uF, 0603",0603,SMT,Samsung Electro-Mechanics,CL10A105KA8NNNC
+11,4,"C29,C28,C30,C27",CL10B473KB8NNNC,"Capacitor, 47 nF, 0603",0603,SMT,Samsung Electro-Mechanics,CL10B473KB8NNNC
+12,5,"C3,C2,C1,C5,C4",CL10B104KO8NNNC,"Capacitor, 100 nF, 0603",0603,SMT,Samsung Electro-Mechanics,CL10B104KO8NNNC
+13,3,"C31,C35,C37",CL10B104KB8NNNC,"Capacitor, 100 nF, 50 V X7R, 0603, gate driver VDD bypass and monitor-input filter",0603,SMT,Samsung Electro-Mechanics,CL10B104KB8NNNC
+14,1,C32,08053C104KAT2A,"Capacitor, 100 nF, 0805",0805,SMT,KYOCERA AVX,08053C104KAT2A
+15,1,C33,MSAST21GAB5475MTNAO1,"Capacitor, 4.7 uF, 0805",0805,SMT,Taiyo Yuden,MSAST21GAB5475MTNAO1
+16,2,"C36,C34",GRM21BZ71E106KE15L,"Capacitor, 10 uF, 25 V X7R, 0805, gate driver VDD bypass",0805,SMT,Murata,GRM21BZ71E106KE15L
+17,2,"CR1,CR2",SS14-E3/61T,"40 V, 1 A Schottky rectifier, SMA (DO-214AC)",SMA (DO-214AC),SMT,Vishay Semiconductors,SS14-E3/61T
+18,1,Ccomp1,CGA4F1C0G2A153J085AE,"Capacitor, 15 nF, C0G, 0805, boost loop compensation",0805,SMT,TDK,CGA4F1C0G2A153J085AE
+19,1,Ccomp2,GRM1555C1H448JA01D,"Capacitor, 44.8 pF, C0G, 0402, boost loop compensation",0402,SMT,Murata,GRM1555C1H448JA01D
+20,1,Cin1,20SVPF56MX,"Polymer aluminium capacitor, 56 uF, 20 V, 5 x 5.9 mm, boost input",SMD radial can 5 x 5.9 mm,SMT,Panasonic Industry,20SVPF56MX
+21,1,Cout1,35SVPK180M,"Polymer aluminium capacitor, 180 uF, 35 V, 8 x 11.9 mm, boost output",SMD radial can 8 x 11.9 mm,SMT,Panasonic Industry,35SVPK180M
+22,1,Cout2,35SVPK180M,"Polymer aluminium capacitor, 180 uF, 35 V, 8 x 11.9 mm, boost output",SMD radial can 8 x 11.9 mm,SMT,Panasonic Industry,35SVPK180M
+23,1,Cout3,35SVPK180M,"Polymer aluminium capacitor, 180 uF, 35 V, 8 x 11.9 mm, boost output",SMD radial can 8 x 11.9 mm,SMT,Panasonic Industry,35SVPK180M
+24,1,Coutx1,C3216X5R1V226M160AC,"Capacitor, 22 uF, 35 V X5R, 1206, boost output bus",1206,SMT,TDK,C3216X5R1V226M160AC
+25,1,Cres1,TMK212BJ474KD-T,"Capacitor, 470 nF, 0805",0805,SMT,Taiyo Yuden,TMK212BJ474KD-T
+26,1,Css1,GRM155R71A333KA01D,"Capacitor, 33 nF, 0402",0402,SMT,Murata,GRM155R71A333KA01D
+27,1,Cvin1,C1005X5R1V474K050BC,"Capacitor, 470 nF, 0402",0402,SMT,TDK,C1005X5R1V474K050BC
+28,5,"D1,D5,D2,D3,D4",WS2812B,"Addressable RGB LED, 5050 PLCC-4, WS2812B pinout/protocol (D1-D5); place with chamfer on footprint chamfer",PLCC-4 5.0 x 5.0 mm,SMT,Worldsemi,WS2812B
+29,2,"D12,D11",SS14-E3/61T,"40 V, 1 A Schottky rectifier, SMA (DO-214AC)",SMA (DO-214AC),SMT,Vishay Semiconductors,SS14-E3/61T
+30,1,D6,SK215ATR,"150 V, 2 A Schottky rectifier, SMA (DO-214AC), boost bootstrap diode",SMA (DO-214AC),SMT,SMC Diode Solutions,SK215ATR
+31,1,IC1,INA240A2DR,"Bidirectional current-sense amplifier with enhanced PWM rejection, SOIC-8",SOIC-8,SMT,Texas Instruments,INA240A2DR
+32,1,J1,2606-1108/010-000,"PCB terminal block, 8-pin two-row stagger, 7.5 mm pitch, 12.5 mm row spacing (J1)","7.5 mm pitch, 8 pin",THT,WAGO,2606-1108/010-000
+33,1,J2,2606-1352,"PCB terminal block, 2-pole double-pinned, 7.5 mm pitch (J2)","7.5 mm pitch, 2 pin",THT,WAGO,2606-1352
+34,1,J3,TYPE-C-31-M-12,"USB 2.0 Type-C receptacle, 16 pin SMD with through-hole shield, right angle","16 pin, right angle",SMT + THT shield,Korean Hroparts Elec,TYPE-C-31-M-12
+35,1,J5,2604-1103,"PCB terminal block, lever, 3-pole, 5.0 mm pitch, push-in CAGE CLAMP (J5)","5.0 mm pitch, 3 pin",THT,WAGO,2604-1103
+36,1,L1,AOTA-B201610S3R3-101-T,"Molded shielded power inductor, 3.3 uH, 2.0 x 1.6 x 1.0 mm, MCU core regulator",2.0 x 1.6 x 1.0 mm,SMT,Abracon,AOTA-B201610S3R3-101-T
+37,1,L2,XAL1580-182MEB,"Shielded power inductor, 1.8 uH, XAL1580 series",XAL1580,SMT,Coilcraft,XAL1580-182MEB
+38,1,L3,PA4332.222NLT,"Shielded drum-core power inductor, 2.2 uH, 4.2 x 4.2 x 2.0 mm",4.2 x 4.2 x 2.0 mm,SMT,Pulse Electronics,PA4332.222NLT
+39,2,"Q2,Q1",CSD17304Q3,"N-channel NexFET power MOSFET with thermal pad, VSON-8, 30 V, boost converter switching pair",VSON-8 (DQG),SMT,Texas Instruments,CSD17304Q3
+40,4,"Q3,Q4,Q5,Q6",CSD19536KCS,"N-channel NexFET power MOSFET, TO-220, H-bridge switch",TO-220,THT,Texas Instruments,CSD19536KCS
+41,1,R1,RC0603FR-07330RL,"Resistor, 330 Ohm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-07330RL
+42,4,"R10,R17,R18,R12",RC1206FR-0710RL,"Resistor, 10 Ohm, 1 %, 1206",1206,SMT,Yageo,RC1206FR-0710RL
+43,1,R19,RC0603FR-07180KL,"Resistor, 180 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-07180KL
+44,2,"R2,R3",RC0603FR-075K1L,"Resistor, 5.1 kOhm, 1 %, 0603, USB-C CC pull-down",0603,SMT,Yageo,RC0603FR-075K1L
+45,1,R20,CRCW0402953KFKED,"Resistor, 953 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW0402953KFKED
+46,1,R21,CRCW0402100KFKED,"Resistor, 100 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW0402100KFKED
+47,1,R23,RC0603FR-074K7L,"Resistor, 4.7 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-074K7L
+48,1,R24,RC0603FR-074K7L,"Resistor, 4.7 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-074K7L
+49,1,R25,RC0603FR-0736K5L,"Resistor, 36.5 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0736K5L
+50,3,"R29,R27,R31",RC0603FR-0768KL,"Resistor, 68 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0768KL
+51,1,R33,RC0603FR-0722RL,"Resistor, 22 Ohm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0722RL
+52,1,R4,RC0603FR-0733RL,"Resistor, 33 Ohm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0733RL
+53,2,"R6,R5",RC0603FR-0727RL,"Resistor, 27 Ohm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0727RL
+54,2,"R7,R11",RC0402FR-071KL,"Resistor, 1 kOhm, 1 %, 0402",0402,SMT,Yageo,RC0402FR-071KL
+55,6,"R8,R28,R30,R32,R26,R9",RC0603FR-0710KL,"Resistor, 10 kOhm, 1 %, 0603",0603,SMT,Yageo,RC0603FR-0710KL
+56,2,"RCS1,Rsense1",CSNL2512FT2L00,"Current-sense resistor, 2 mOhm, 1 %, 2 W, 2512 (boost switch and input monitor shunts)",2512,SMT,Stackpole,CSNL2512FT2L00
+57,1,Rcomp1,RC0201FR-0780K6L,"Resistor, 80.6 kOhm, 1 %, 0201, boost loop compensation",0201,SMT,Yageo,RC0201FR-0780K6L
+58,1,Rfbb1,CRCW04023K79FKED,"Resistor, 3.79 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW04023K79FKED
+59,1,Rfbt1,CRCW040264K9FKED,"Resistor, 64.9 kOhm, 1 %, 0402, boost bus feedback divider",0402,SMT,Vishay,CRCW040264K9FKED
+60,1,Rslope1,RC0201FR-0749K9L,"Resistor, 49.9 kOhm, 1 %, 0201, slope compensation",0201,SMT,Yageo,RC0201FR-0749K9L
+61,1,Rt1,CRCW040218K2FKED,"Resistor, 18.2 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW040218K2FKED
+62,1,Ruvb1,CRCW04027K15FKED,"Resistor, 7.15 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW04027K15FKED
+63,1,Ruvt1,CRCW040249K9FKED,"Resistor, 49.9 kOhm, 1 %, 0402",0402,SMT,Vishay,CRCW040249K9FKED
+64,1,Rvin1,CRCW04023R01FKED,"Resistor, 3.01 Ohm, 1 %, 0402",0402,SMT,Vishay,CRCW04023R01FKED
+65,1,SW1,B3F-4055,"Through-hole tactile switch, 12 x 12 mm, user button",12 x 12 mm,THT,Omron,B3F-4055
+66,1,U1,RP2354A,"MCU RP2354A0A4, ARM Cortex-M33, QFN-60 7x7 mm 0.4 mm pitch (U1)",VQFN-60 7 x 7 mm,SMT,Raspberry Pi,RP2354A
+67,1,U10,ADS7128IRTER,"8-channel 12-bit analog-to-digital converter with I2C interface, WQFN-16",WQFN-16,SMT,Texas Instruments,ADS7128IRTER
+68,1,U2,AMS1117-3.3,LDO 3.3 V 800 mA SOT-223 (U2); exact AMS1117-3.3 or pin-compatible LD1117S33TR,SOT-223,SMT,Advanced Monolithic Systems,AMS1117-3.3
+69,1,U3,SN74AHCT1G125DBVR,"Single tri-state buffer, SOT-23-5, LED data level shifter",SOT-23-5,SMT,Texas Instruments,SN74AHCT1G125DBVR
+70,1,U4,LM5122MHX/NOPB,"Wide-input synchronous boost controller with integrated gate drivers, HTSSOP-20 (PowerPAD)",HTSSOP-20 (PWP),SMT,Texas Instruments,LM5122MHX/NOPB
+71,2,"U6,U5",UCC27735DR,"Dual-channel high- and low-side gate driver for the H-bridge, SOIC-14",SOIC-14,SMT,Texas Instruments,UCC27735DR
+72,1,U7,TPS62160DSGR,"Synchronous step-down (buck) converter for the 5 V control rail, WSON-8",WSON-8 (DSG),SMT,Texas Instruments,TPS62160DSGR
+73,2,"U8,U9",TMP235A2DBZR,"Analog temperature sensor, SOT-23-3",SOT-23-3,SMT,Texas Instruments,TMP235A2DBZR
+74,1,X1,ABM8-272-T3,"Crystal, 12.000 MHz, 10 pF load, 3.2 x 2.5 mm",3.2 x 2.5 mm,SMT,Abracon,ABM8-272-T3

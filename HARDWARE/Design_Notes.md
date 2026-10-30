@@ -17,10 +17,6 @@ wrote it so a future version of ourselves — or anyone picking the project up
 
  GPIO4: Controls Q6 MOSFET (CSD19536KCS made by TI) through UCC27735DR IC made by TI
 
- GPIO5: Not in use (unused, no connection)
-
- GPIO6: Not in use (unused, no connection)
-
  GPIO8: Connects to ADS7128IRTER made by TI SDA pin for serial data pulled up to 3v3 by a 4.7k resistor
 
  GPIO9: Connects to ADS7128IRTER made by TI SCL pin for serial clock pulled up to 3v3 by a 4.7k resistor
