@@ -8,7 +8,7 @@
 		(company "Flamingo & Cactus")
 		(comment 1 "Please do not consider this as a finished schematic, change is constant.")
 		(comment 2 "License: CERN-OHL-W-2.0")
-		(comment 3 "https://github.com/bearjhartjen/Lamoka1-project")
+		(comment 3 "https://github.com/bearjhartjen/Lamoka1-half")
 	)
 	(lib_symbols
 		(symbol "2604-1103:2604-1103"

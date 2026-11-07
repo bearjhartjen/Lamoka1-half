@@ -485,6 +485,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -780,7 +781,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "U1-10,X1,Cres1,TP1-41,Rt1,Cvin1,Coutx1,#PWR1-72,Cout1-3,Rfbt1,C1-33,CR1-2,D1-12,Css1,Rfbb1,Cin1,Rsense1,NT1-2,SW1-2,Rvin1,H1-8,Ccomp1,Rcomp1,Q1-7,IC1,Ruvb1,Ruvt1,#G1-4,J1-7,Rslope1,L1-3,R1-33",
+    "used_designators": "#G1-4,#PWR1-72,C1-33,CR1-2,Ccomp1,Cin1,Cout1-3,Coutx1,Cres1,Css1,Cvin1,D1-12,H1-8,IC1,J1-7,L1-3,NT1-2,Q1-7,R1-33,Rcomp1,Rfbb1,Rfbt1,Rsense1,Rslope1,Rt1,Ruvb1,Ruvt1,Rvin1,SW1-2,TP1-41,U1-10,X1",
     "variants": []
   },
   "sheets": [

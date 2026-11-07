@@ -8,7 +8,7 @@
 		(company "Flamingo & Cactus")
 		(comment 1 "Please do not consider this as a finished schematic, change is constant.")
 		(comment 2 "License: CERN-OHL-W-2.0")
-		(comment 3 "https://github.com/bearjhartjen/Lamoka1-project")
+		(comment 3 "https://github.com/bearjhartjen/Lamoka1-half")
 	)
 	(lib_symbols
 		(symbol "74xGxx:74AHCT1G125"
@@ -1703,6 +1703,26 @@
 			)
 			(embedded_fonts no)
 		)
+	)
+	(text "D1-D5 are WS2812B"
+		(exclude_from_sim no)
+		(at 137.922 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c038fde8-63ee-4bc5-9b18-d4054255d032")
+	)
+	(text "C1-C5 are CL10B104KO8NNNC"
+		(exclude_from_sim no)
+		(at 118.872 167.132 0)
+		(effects
+			(font
+				(size 1.651 1.651)
+			)
+		)
+		(uuid "ea30cac8-8b85-4558-a3dc-bcc4b7aefd6e")
 	)
 	(junction
 		(at 53.34 58.42)
@@ -3406,7 +3426,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6e50c5aa-1d3a-47c6-bd07-3cdc685639bb")
 		(property "Reference" "C11"
 			(at 55.88 165.1 90)
@@ -3462,8 +3481,7 @@
 			)
 		)
 		(property "MPN" "GRM31CR61A107MEA8K"
-			(at 55.88 172.72 90)
-			(hide yes)
+			(at 48.006 176.784 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4713,8 +4731,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 53.34 49.53 90)
-			(hide yes)
+			(at 63.5 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
