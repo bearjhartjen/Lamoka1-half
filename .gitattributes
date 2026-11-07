@@ -1,5 +1,39 @@
-# GitHub Linguist: keep the language chart on design source,
-# not generated manufacturing output.
+# ---------------------------------------------------------------------------
+# How this repo is built: this is open hardware, not a pure-software repo.
+#
+#   - Design source (primary): KiCad schematics (*.kicad_sch = KiCad
+#     Schematic) + PCB layout (*.kicad_pcb = KiCad Layout) for the Lamoka1/2.
+#   - Firmware: PIE, the Arduino UI sketch (*.ino = C++) under SOFTWARE/.
+#   - Tooling: a small Python helper for the 3D switch model.
+#   - Docs: Markdown (excluded from language stats by default).
+#   - Generated output: fab/BOM files exported from KiCad.
+#
+# GitHub's Linguist classifies KiCad files as "data", which it EXCLUDES from
+# the language stats. Without the linguist-detectable lines below, GitHub
+# shows this repo as "C++ 100%" from the one firmware sketch, even though
+# ~95% of the bytes are KiCad design. With them, the bar reads KiCad
+# (design) + C++ (firmware). See github-linguist/linguist docs/overrides.md.
+# ---------------------------------------------------------------------------
+
+# --- Hardware design source: make the KiCad files count ---
+*.kicad_sch linguist-detectable
+*.kicad_pcb linguist-detectable
+*.kicad_sym linguist-detectable
+*.kicad_mod linguist-detectable
+*.kicad_wks linguist-detectable
+*.sch       linguist-detectable
+
+# KiCad project files are JSON (config, not design source). Highlight as
+# JSON but keep out of the language stats.
+*.kicad_pro linguist-language=JSON
+
+# --- Firmware (the only true C++; already the Linguist default) ---
+*.ino linguist-language=C++
+
+# --- Tooling ---
+*.py linguist-language=Python
+
+# --- Generated output: keep the chart on source, not exports ---
 
 # Interactive BOMs are generated HTML — without this GitHub labels the repo "HTML"
 *.html linguist-generated=true
@@ -16,3 +50,6 @@
 *.tsv linguist-generated=true
 *.xls linguist-generated=true
 *.xlsx linguist-generated=true
+
+# KiCad session lock files (per-session state, never source)
+*.lck linguist-generated=true

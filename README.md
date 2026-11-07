@@ -2,14 +2,14 @@
   <img
     src="Images/lamoka1-2-render-iso.png"
     alt="Lamoka1/2"
-    width="700"
+    width="500"
   >
   <br>
   Lamoka1/2
 </h1>
 
 <p align="center">
-  PIE versions v1.9 and below will function on this board.
+  PIE v1.9 works on this board.
   For more information on PIE, go
   <a href="SOFTWARE/README.md">here</a>.
 </p>
